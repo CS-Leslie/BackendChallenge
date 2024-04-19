@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# package-lock.json is automatically generated for npm dependencies
+package-lock.json

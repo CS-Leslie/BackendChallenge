@@ -1,0 +1,46 @@
+{
+  "name": "src",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Demo para un Challengue de Ingenieria en Backend, BanPay.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/api/index.js",
+    "test": "jest --runInBand --verbose --coverage --forceExit"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CS-Leslie/BackendChallengue.git"
+  },
+  "author": "Leslie Ramírez Gallegos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CS-Leslie/BackendChallengue/issues"
+  },
+  "homepage": "https://github.com/CS-Leslie/BackendChallengue#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "celebrate": "^15.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-mock": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^6.3.4"
+  }
+}
