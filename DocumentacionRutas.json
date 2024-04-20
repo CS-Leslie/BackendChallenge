@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "adf38f9a-676a-40de-8a76-2ad29b4e381e",
+		"name": "Challenge Backend BanPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[POST] Create a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"prueba@mail.com\",\n    \"name\": \"prueba\",\n    \"password\": \"prueba@mail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3001/challenge/user"
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] Return a user by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/challengue/user?email=prueba@mail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"challengue",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "prueba@mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] Get users, pagination on.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/challenge/users?page=1&limit=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"challenge",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[PATCH] Update a user.",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Prueba PATCH\",\n    \"password\":\"prueba123\",\n    \"role\":\"films\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/challenge/user?email=prueba@mail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"challenge",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "prueba@mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[DELETE] Delete a user by email.",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/challenge/user?email=prueba@mail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"challenge",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "prueba@mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
